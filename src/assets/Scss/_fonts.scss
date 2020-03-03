@@ -1,0 +1,59 @@
+@font-face {
+  font-family: "Anders", sans-serif;
+  src: url("~@/assets/Fonts/Anders.eot");
+  src: local("~@/assets/Fonts/Anders"),
+    url("~@/assets/Fonts/Anders.eot?#iefix") format("embedded-opentype"),
+    url("~@/assets/Fonts/Anders.woff2") format("woff2"),
+    url("~@/assets/Fonts/Anders.woff") format("woff"),
+    url("~@/assets/Fonts/Anders.svg#Anders") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* dancing-script-400normal - latin */
+@font-face {
+  font-family: "Dancing Script";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 400;
+  src: local("Dancing Script Regular "), local("Dancing Script-Regular"),
+    url("~@/assets/Fonts/dancing-script-latin-400.woff2") format("woff2"),
+    /* Super Modern Browsers */
+      url("~@/assets/Fonts/dancing-script-latin-400.woff") format("woff"); /* Modern Browsers */
+}
+
+/* dancing-script-500normal - latin */
+@font-face {
+  font-family: "Dancing Script";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 500;
+  src: local("Dancing Script Medium "), local("Dancing Script-Medium"),
+    url(".~@/assets/Fonts/dancing-script-latin-500.woff2") format("woff2"),
+    /* Super Modern Browsers */
+      url("~@/assets/Fonts/dancing-script-latin-500.woff") format("woff"); /* Modern Browsers */
+}
+
+/* dancing-script-600normal - latin */
+@font-face {
+  font-family: "Dancing Script";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 600;
+  src: local("Dancing Script SemiBold "), local("Dancing Script-SemiBold"),
+    url("~@/assets/Fonts/dancing-script-latin-600.woff2") format("woff2"),
+    /* Super Modern Browsers */
+      url("~@/assets/Fonts/dancing-script-latin-600.woff") format("woff"); /* Modern Browsers */
+}
+
+/* dancing-script-700normal - latin */
+@font-face {
+  font-family: "Dancing Script";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 700;
+  src: local("Dancing Script Bold "), local("Dancing Script-Bold"),
+    url("~@/assets/Fonts/dancing-script-latin-700.woff2") format("woff2"),
+    /* Super Modern Browsers */
+      url("~@/assets/Fonts/dancing-script-latin-700.woff") format("woff"); /* Modern Browsers */
+}

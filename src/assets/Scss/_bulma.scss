@@ -1,0 +1,15 @@
+$primary: green;
+$dark: rgba(0, 0, 0, 0.4);
+$footer-background-color: #000;
+$title-color: #ffffff;
+
+.image.is-332x500 {
+  height: 500px;
+  width: 322px;
+}
+
+@import "~bulma";
+
+.column {
+  display: flex;
+}
