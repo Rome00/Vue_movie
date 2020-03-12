@@ -34,29 +34,18 @@ export default {
     return {
       rad: 33,
       size: 35,
-      strokeFill: 207
+      strokeFill: this.strokeVal
     };
   },
   computed: {
     strokeVal() {
       return 2 * Math.PI * this.rad;
-    },
-    // eslint-disable-next-line vue/return-in-computed-property
-    progress() {
-      const val = this.rate * 10;
-      let fillCircle = 0;
-      let circle = this.strokeVal - (val / 100) * this.strokeVal;
-      while (fillCircle <= circle) {
-        fillCircle += 1;
-        return fillCircle;
-      }
     }
   },
   watch: {
     rate() {
-      this.strokeVal = 207;
+      this.strokeFill = this.strokeVal;
       const val = this.rate * 10;
-      console.log(this.strokeVal - (val / 100) * this.strokeVal);
       let percent = this.strokeVal - (val / 100) * this.strokeVal;
       let interval = setInterval(() => {
         if (this.strokeFill > percent) {

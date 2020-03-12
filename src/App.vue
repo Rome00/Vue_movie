@@ -1,4 +1,4 @@
-<template>
+yarn<template>
   <div>
     <Nav />
     <Home />

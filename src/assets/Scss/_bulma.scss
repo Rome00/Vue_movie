@@ -8,6 +8,104 @@ $title-color: #ffffff;
   width: 322px;
 }
 
+.image.is-60x30 {
+  height: 30px;
+  width: 60px;
+}
+.image.is-50x50 {
+  height: 50px;
+  width: 50px;
+}
+
+.has-background {
+  &-green {
+    background-color: #00755e !important;
+  }
+  &-orange {
+    background-color: #ee6c02 !important;
+  }
+  &-lightGray {
+    background-color: #939393 !important;
+  }
+  &lightGreen {
+    background-color: rgba(0, 128, 0, 0.4);
+  }
+}
+
+.is {
+  // flexbox direction column
+  &-vflex {
+    flex-direction: column;
+  }
+
+  // flexbox horizontal aligns
+  &-around {
+    justify-content: space-around !important;
+  }
+  &-between {
+    justify-content: space-between !important;
+  }
+  &-start {
+    justify-content: flex-start !important;
+  }
+  &-end {
+    justify-content: flex-end !important;
+  }
+  &-center {
+    justify-content: center !important;
+  }
+  &-baseline {
+    justify-content: baseline !important;
+  }
+  &-evenly {
+    justify-content: space-evenly !important;
+  }
+
+  // flexbox vertical aligns
+  &-varound {
+    align-items: space-around !important;
+  }
+  &-vbetween {
+    align-items: space-between !important;
+  }
+  &-vstart {
+    align-items: flex-start !important;
+  }
+  &-vend {
+    align-items: flex-end !important;
+  }
+  &-vcenter {
+    align-items: center !important;
+  }
+  &-vbaseline {
+    align-items: baseline !important;
+  }
+  &-vevenly {
+    align-items: space-evenly !important;
+  }
+
+  //positions
+  &-absolute {
+    position: absolute !important;
+  }
+  &-fixed {
+    position: fixed;
+  }
+}
+
+.w-100 {
+  width: 100% !important;
+}
+.w-75 {
+  width: 75% !important;
+}
+.w-50 {
+  width: 50% !important;
+}
+.w-25 {
+  width: 25% !important;
+}
+
 @import "~bulma";
 
 .column {

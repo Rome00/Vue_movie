@@ -29,6 +29,9 @@ export default new Vuex.Store({
     },
     routerId: state => {
       return state.routerID;
+    },
+    imgGet: state => {
+      return state.imgHead;
     }
   },
   mutations: {

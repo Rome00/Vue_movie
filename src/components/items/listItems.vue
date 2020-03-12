@@ -1,5 +1,5 @@
 <template>
-  <div class="column is-one-quarter m-t-lg">
+  <div class="column is-one-quarter-desktop is-one-third-tablet m-t-lg">
     <router-link
       tag="div"
       class="card hvr-grow"
@@ -14,7 +14,9 @@
         <div class="media">
           <div class="media-left"></div>
           <div class="media-content">
-            <p class="title is-4">{{ data.title | shortenText(30) }}</p>
+            <p class="title is-4 is-color-black">
+              {{ data.title | shortenText(30) }}
+            </p>
           </div>
         </div>
 
@@ -46,8 +48,19 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.title {
+  color: black;
+}
 .card {
   cursor: pointer;
+}
+.content{
+  font-size: 16px;
+}
+@media only screen and (max-width: 1024px) {
+  .content {
+    font-size: 12px;
+  }
 }
 .hvr-grow {
   display: inline-block;
