@@ -49,19 +49,15 @@
               </transition>
             </div>
             <div class="column is-two-fifths-tablet is-full-mobile">
-              <div class="columns is-mobile is-vcentered">
-                <div class="column is-two-fifths">
-                  <Progress :rate="detail.vote_average" />
-                </div>
-                <div class="column">
-                  <div class="is-score">
-                    <p class="is-mb-small125"><strong>METASCORE</strong></p>
-                    <div class="is-flex is-around">
-                      <p>from</p>
-                      <figure class="image is-60x30">
-                        <img src="../../assets/Img/imdb.png" alt="imdb" />
-                      </figure>
-                    </div>
+              <div class="is-100 is-flex is-start">
+                <Progress :rate="detail.vote_average" />
+                <div class="is-score is-pl-2">
+                  <p class="is-mb-small125"><strong>METASCORE</strong></p>
+                  <div class="is-flex is-around">
+                    <p>from</p>
+                    <figure class="image is-60x30">
+                      <img src="../../assets/Img/imdb.png" alt="imdb" />
+                    </figure>
                   </div>
                 </div>
               </div>
@@ -69,35 +65,37 @@
             <div
               class="column is-two-fifths-tablet is-full-mobile is-offset-1-tablet"
             >
-              <div class="columns is-mobile is-vcentered">
-                <div class="w-100 is-flex is-start is-vcenter">
-                  <figure class="image is-50x50">
-                    <img src="../../assets/Img/popular.png" alt="popularity" />
-                  </figure>
-                  <p class="has-text-white is-popular is-size-2">
-                    {{ detail.popularity }}
-                  </p>
-                </div>
+              <div class="is-100 is-flex is-start is-vcenter">
+                <figure class="image is-50x50">
+                  <img src="../../assets/Img/popular.png" alt="popularity" />
+                </figure>
+                <p class="has-text-white is-popular is-pl-3 is-size-4">
+                  {{ detail.popularity }}
+                </p>
               </div>
             </div>
-            <div class="colimn is-full">
-              <div class="columns is-8-fullhd is-variable is-multiline">
-                <div class="column is-half">
-                  <div
-                    class="box is-flex is-vflex w-100 has-background-green is-relative"
-                  >
-                    <div class="is-boxoffice-bg is-absolute"></div>
-                    <div
-                      class="is-flex is-between p-b-md is-relative is-boxoffice-box"
-                    >
-                      <div class="is-box_title">budget</div>
-                      <div class="is-box_title">revenue</div>
-                    </div>
-                    <div
-                      class="is-flex is-between is-relative is-boxoffice-box"
-                    >
-                      <div class="is-box_val">{{ budget }}</div>
-                      <div class="is-box_val">{{ revenue }}</div>
+            <div class="colimn is-full is-mt-2">
+              <div class="columns is-variable is-multiline is-mobile">
+                <div class="column is-8-fullhd is-full-mobile">
+                  <div class="columns is-mobile">
+                    <div class="column is-two-thirds-mobile">
+                      <div
+                        class="box is-flex is-vflex is-100 has-background-green is-relative"
+                      >
+                        <div class="is-boxoffice-bg is-absolute"></div>
+                        <div
+                          class="is-flex is-vflex is-between p-b-md is-relative is-boxoffice-box"
+                        >
+                          <div class="is-box_title">budget</div>
+                          <div class="is-box_val">{{ budget }}</div>
+                        </div>
+                        <div
+                          class="is-flex is-vflex is-between is-relative is-boxoffice-box"
+                        >
+                          <div class="is-box_title">revenue</div>
+                          <div class="is-box_val">{{ revenue }}</div>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -260,6 +258,11 @@ export default {
     }
     &-box {
       z-index: 5555;
+      &:nth-child(3) {
+        @media screen and(max-width: 768px) {
+          margin-top: 0.5rem;
+        }
+      }
     }
   }
   &-runtime {

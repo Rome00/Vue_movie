@@ -1,5 +1,5 @@
 <template>
-  <div class="column is-10">
+  <div class="column is-10-mobile is-10-tablet is-10-desktop">
     <div class="columns is-centered is-multiline is-mobile is-variable is-8">
       <itemList v-for="item in movieData" :key="item.id" :data="item" />
     </div>
