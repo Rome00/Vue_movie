@@ -2,7 +2,7 @@
   <div :style="bgImage">
     <div class="columns is-centered is-multiline is-mobile bg-transparent-dark">
       <div class="column is-4-desktop is-6-tablet is-10-mobile">
-        <section class="m-t-lg is-full">
+        <section class="is-mt-5 is-full">
           <b-field label="Find a Movie">
             <b-autocomplete
               v-model="name"

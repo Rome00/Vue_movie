@@ -1,9 +1,11 @@
 <template>
-  <div class="column is-full m-b-xl">
-    <div class="columns p-t-xl">
-      <div class="column is-one-quarter is-offset-2 bg-box m-t-lg">
+  <div class="column is-11 is-center is-mb-5">
+    <div class="columns is-mobile is-multiline is-pt-4">
+      <div
+        class="column is-one-quarter-desktop is-full-mobile is-one-third-tablet is-offset-2-tablet bg-box m-t-lg"
+      >
         <div class="poster-box">
-          <figure class="image is-332x500">
+          <figure class="image is-2by3">
             <transition
               enter-active-class="animated fadeIn"
               leave-active-class="aniamted fadeOut"
@@ -19,7 +21,9 @@
           </figure>
         </div>
       </div>
-      <div class="column is-two-fifths is-offset-1 bg-box m-t-lg">
+      <div
+        class="column is-full-mobile is-two-fifths-tablet is-offset-1-tablet bg-box is-mt-2"
+      >
         <div class="is-block">
           <div class="columns is-multiline">
             <div class="column is-full">
@@ -39,19 +43,19 @@
                 :duration="300"
                 mode="out-in"
               >
-                <p :key="detail.overview" class="has-text-white p-t-md">
+                <p :key="detail.overview" class="has-text-white is-pt-1-half">
                   {{ detail.overview }}
                 </p>
               </transition>
             </div>
-            <div class="column is-two-fifths">
-              <div class="columns is-vcentered">
+            <div class="column is-two-fifths-tablet is-full-mobile">
+              <div class="columns is-mobile is-vcentered">
                 <div class="column is-two-fifths">
                   <Progress :rate="detail.vote_average" />
                 </div>
                 <div class="column">
                   <div class="is-score">
-                    <p class="m-b-xxs"><strong>METASCORE</strong></p>
+                    <p class="is-mb-small125"><strong>METASCORE</strong></p>
                     <div class="is-flex is-around">
                       <p>from</p>
                       <figure class="image is-60x30">
@@ -62,22 +66,22 @@
                 </div>
               </div>
             </div>
-            <div class="column is-two-fifths is-offset-1">
-              <div class="columns is-vcentered">
-                <div class="column is-two-fifths is-end">
+            <div
+              class="column is-two-fifths-tablet is-full-mobile is-offset-1-tablet"
+            >
+              <div class="columns is-mobile is-vcentered">
+                <div class="w-100 is-flex is-start is-vcenter">
                   <figure class="image is-50x50">
                     <img src="../../assets/Img/popular.png" alt="popularity" />
                   </figure>
-                </div>
-                <div class="column">
-                  <p class="has-text-white is-popular">
+                  <p class="has-text-white is-popular is-size-2">
                     {{ detail.popularity }}
                   </p>
                 </div>
               </div>
             </div>
             <div class="colimn is-full">
-              <div class="columns is-8 is-variable is-multiline">
+              <div class="columns is-8-fullhd is-variable is-multiline">
                 <div class="column is-half">
                   <div
                     class="box is-flex is-vflex w-100 has-background-green is-relative"

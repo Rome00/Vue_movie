@@ -1,5 +1,7 @@
 <template>
-  <div class="column is-one-quarter-desktop is-one-third-tablet m-t-lg">
+  <div
+    class="column is-one-quarter-widescreen is-one-third-tablet is-full-mobile is-mt-4"
+  >
     <router-link
       tag="div"
       class="card hvr-grow"
@@ -54,7 +56,7 @@ export default {
 .card {
   cursor: pointer;
 }
-.content{
+.content {
   font-size: 16px;
 }
 @media only screen and (max-width: 1024px) {

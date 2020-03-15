@@ -1,7 +1,5 @@
-$primary: green;
-$dark: rgba(0, 0, 0, 0.4);
-$footer-background-color: #000;
-$title-color: #ffffff;
+@import "./variables";
+
 
 .image.is-332x500 {
   height: 500px;
@@ -15,6 +13,12 @@ $title-color: #ffffff;
 .image.is-50x50 {
   height: 50px;
   width: 50px;
+}
+
+@media only screen and (max-width: 1023px) {
+  .navbar-menu {
+    background: rgba(255, 255, 255, 0.5);
+  }
 }
 
 .has-background {
@@ -93,6 +97,134 @@ $title-color: #ffffff;
   }
 }
 
+@media only screen and (max-width: 768px){
+  .is {
+  // flexbox direction column
+  &-vflex-mobile {
+    flex-direction: column;
+  }
+
+  // flexbox horizontal aligns
+  &-around-mobile {
+    justify-content: space-around !important;
+  }
+  &-between-mobile {
+    justify-content: space-between !important;
+  }
+  &-start-mobile {
+    justify-content: flex-start !important;
+  }
+  &-end-mobile {
+    justify-content: flex-end !important;
+  }
+  &-center-mobile {
+    justify-content: center !important;
+  }
+  &-baseline-mobile {
+    justify-content: baseline !important;
+  }
+  &-evenly-mobile {
+    justify-content: space-evenly !important;
+  }
+
+  // flexbox vertical aligns
+  &-varound-mobile {
+    align-items: space-around !important;
+  }
+  &-vbetween-mobile {
+    align-items: space-between !important;
+  }
+  &-vstart-mobile {
+    align-items: flex-start !important;
+  }
+  &-vend-mobile {
+    align-items: flex-end !important;
+  }
+  &-vcenter-mobile {
+    align-items: center !important;
+  }
+  &-vbaseline-mobile {
+    align-items: baseline !important;
+  }
+  &-vevenly-mobile {
+    align-items: space-evenly !important;
+  }
+
+  //positions
+  &-absolute-mobile {
+    position: absolute !important;
+  }
+  &-fixed-mobile {
+    position: fixed;
+  }
+}
+}
+
+
+
+@media only screen and (min-width: 768px){
+  .is {
+  // flexbox direction column
+  &-vflex-tablet {
+    flex-direction: column;
+  }
+
+  // flexbox horizontal aligns
+  &-around-tablet {
+    justify-content: space-around !important;
+  }
+  &-between-tablet {
+    justify-content: space-between !important;
+  }
+  &-start-tablet {
+    justify-content: flex-start !important;
+  }
+  &-end-tablet {
+    justify-content: flex-end !important;
+  }
+  &-center-tablet {
+    justify-content: center !important;
+  }
+  &-baseline-tablet {
+    justify-content: baseline !important;
+  }
+  &-evenly-tablet {
+    justify-content: space-evenly !important;
+  }
+
+  // flexbox vertical aligns
+  &-varound-tablet {
+    align-items: space-around !important;
+  }
+  &-vbetween-tablet {
+    align-items: space-between !important;
+  }
+  &-vstart-tablet {
+    align-items: flex-start !important;
+  }
+  &-vend-tablet {
+    align-items: flex-end !important;
+  }
+  &-vcenter-tablet {
+    align-items: center !important;
+  }
+  &-vbaseline-tablet {
+    align-items: baseline !important;
+  }
+  &-vevenly-tablet {
+    align-items: space-evenly !important;
+  }
+
+  //positions
+  &-absolute-tablet {
+    position: absolute !important;
+  }
+  &-fixed-tablet {
+    position: fixed;
+  }
+}
+}
+
 .w-100 {
   width: 100% !important;
 }
@@ -106,7 +238,9 @@ $title-color: #ffffff;
   width: 25% !important;
 }
 
+
 @import "~bulma";
+
 
 .column {
   display: flex;

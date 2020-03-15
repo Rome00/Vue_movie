@@ -1,5 +1,5 @@
 <template>
-  <b-navbar type="is-black">
+  <b-navbar type="is-black" fixed-top="true">
     <template slot="brand">
       <b-navbar-item class="has-text-primary" tag="router-link" to="/"
         >The movie Db</b-navbar-item
@@ -46,6 +46,28 @@ export default {};
     &:hover {
       color: white !important;
     }
+  }
+}
+@media only screen and (max-width: 1023px) {
+  .navbar-menu {
+    height: 100vh;
+    width: 50%;
+    position: fixed;
+    background: black !important;
+    right: 0;
+    clip-path: circle(10px at 95% -15%);
+    transition: all 0.4s ease-in-out;
+    display: block !important;
+  }
+  .navbar-menu.is-active {
+    transition: all 0.4s ease-in-out;
+    clip-path: circle(200vh at 95% -15%);
+  }
+}
+@media only screen and (max-width: 768px) {
+  .navbar-menu {
+    height: 100vh;
+    width: 80%;
   }
 }
 </style>
