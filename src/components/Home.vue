@@ -1,11 +1,14 @@
 <template>
-  <div :style="[darkBg ? 'background: #000' : bgImage]">
+  <div :style="[darkBg ? { background: '#000' } : bgImage]">
     <div
       class="columns is-centered is-multiline is-mobile bg-transparent-dark is-min_full"
     >
       <div class="column is-4-desktop is-6-tablet is-10-mobile">
         <section class="is-mt-2 is-full">
-          <b-field label="Find a Movie">
+          <b-field
+            :class="[darkBg ? 'search_center' : 'search_top']"
+            label="Find a Movie"
+          >
             <b-autocomplete
               v-model="name"
               :data="dataInfo"
@@ -71,10 +74,9 @@ export default {
       return this.$store.getters.searchedMovieData;
     },
     darkBg() {
-      if (this.$route.path === "/") {
+      if (this.$route.fullPath === "/") {
         return true;
       } else {
-        console.log(this.$route);
         return false;
       }
     },
@@ -139,6 +141,16 @@ export default {
 </script>
 
 <style lang="scss">
+.search {
+  &_center {
+    margin-top: 45%;
+    transition: all 0.3s ease;
+  }
+  &_top {
+    margin-top: 0;
+    transition: all 0.3s ease;
+  }
+}
 .label {
   text-align: center;
   color: white !important;
