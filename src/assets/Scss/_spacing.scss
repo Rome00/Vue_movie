@@ -44,6 +44,12 @@
     }
 }
 
+//generate with in %
+@each $length in $width {
+    .is-v#{$length}{
+        height: #{$length}#{'vh'} !important;
+    }
+}
 
 // font size genetation
 @for $i from 10 to $maxFont {

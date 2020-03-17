@@ -1,5 +1,5 @@
 <template>
-  <b-navbar type="is-black" fixed-top="true">
+  <b-navbar type="is-black" fixed-top>
     <template slot="brand">
       <b-navbar-item class="has-text-primary" tag="router-link" to="/"
         >The movie Db</b-navbar-item

@@ -1,12 +1,14 @@
 <template>
-  <div :style="bgImage">
-    <div class="columns is-centered is-multiline is-mobile bg-transparent-dark">
+  <div :style="[darkBg ? 'background: #000' : bgImage]">
+    <div
+      class="columns is-centered is-multiline is-mobile bg-transparent-dark is-min_full"
+    >
       <div class="column is-4-desktop is-6-tablet is-10-mobile">
-        <section class="m-t-lg is-full">
+        <section class="is-mt-2 is-full">
           <b-field label="Find a Movie">
             <b-autocomplete
               v-model="name"
-              :data="data"
+              :data="dataInfo"
               placeholder="e.g. Fight Club"
               field="title"
               :loading="isFetching"
@@ -65,10 +67,17 @@ export default {
   },
   computed: {
     ...mapGetters(["detailInfo", "detailBg"]),
-    data() {
+    dataInfo() {
       return this.$store.getters.searchedMovieData;
     },
-    // eslint-disable-next-line vue/return-in-computed-property
+    darkBg() {
+      if (this.$route.path === "/") {
+        return true;
+      } else {
+        console.log(this.$route);
+        return false;
+      }
+    },
     bgImage() {
       const data = this.$store.getters.onLoadMovies;
       if (data.length >= 1 && this.detailInfo) {
@@ -148,5 +157,8 @@ export default {
 }
 .bg-transparent-dark {
   background: rgba($color: #000000, $alpha: 0.7);
+}
+.is-min_full {
+  min-height: 100vh;
 }
 </style>

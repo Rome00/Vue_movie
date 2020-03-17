@@ -72,6 +72,8 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
+  max-height: 70px;
+  max-width: 70px;
   svg {
     height: 70px;
     width: 70px;

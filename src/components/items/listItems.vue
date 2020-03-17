@@ -1,5 +1,7 @@
 <template>
-  <div class="column is-one-quarter-desktop is-one-third-tablet m-t-lg">
+  <div
+    class="column is-one-quarter-fullhd is-one-third-desktop is-half-tablet is-full-mobile is-mt-2 is-mb-2"
+  >
     <router-link
       tag="div"
       class="card hvr-grow"
